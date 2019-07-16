@@ -22,7 +22,7 @@ docker-compose up -d
 <http://localhost:8080> にjenkinsが立ち上がります。
 
 ```
-docker exec -it master bash
+docker exec -it -u root master bash
 xvfb-run --auto-servernum --server-args='-screen 0 640x480x24' /opt/Unity/Editor/Unity -logFile -batchmode -username "${UNITY_USERNAME}" -password "${UNITY_PASSWORD}"
 exit
 ```
