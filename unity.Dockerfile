@@ -53,7 +53,6 @@ RUN apt-get update -qq; \
     zlib1g \
     pulseaudio \
     debconf \
-    # npm \
     xdg-utils \
     lsb-release \
     libpq5 \
@@ -84,7 +83,5 @@ RUN wget -nv ${DOWNLOAD_URL} -O UnitySetup && \
     rm UnitySetup && \
     rm -rf /tmp/unity && \
     rm -rf /root/.local/share/Trash/*
-
-# ADD CACerts.pem /root/.local/share/unity3d/Certificates/
 
 USER jenkins
