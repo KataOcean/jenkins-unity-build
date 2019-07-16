@@ -1,2 +1,4 @@
 jenkins_home/
-
+.env
+*.alf
+*.ulf
