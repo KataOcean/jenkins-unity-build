@@ -1,5 +1,6 @@
 #!/bin/bash
+set -eu
 
 env
 
-# docker build --build-arg SOURCE_COMMIT=$SOURCE_COMMIT -f $DOCKERFILE_PATH -t $IMAGE_NAME .
+docker build . -t $IMAGE_NAME -f ./unity.Dockerfile --build-arg DOWNLOAD_URL=${DOWNLOAD_URL} SHA1=${SHA1}
