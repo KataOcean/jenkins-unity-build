@@ -27,7 +27,7 @@ SHA1=967f3f280ca422a222b58a50850f96e99604aef9
 # How to build
 
 ```
-docker build . [-t <NAME>] -f ./unity.Dockerfile --build-arg DOWNLOAD_URL=<YOUR_UNITY_DOWNLOAD_URL> SHA1=<YOUR_UNITY_DOWNLOAD_SHA1> [COMPONENTS=<Unity|Windows|Windows-Mono|Mac|Mac-Mono|WebGL>]
+docker build [-t <NAME>] --build-arg DOWNLOAD_URL=<YOUR_UNITY_DOWNLOAD_URL> SHA1=<YOUR_UNITY_DOWNLOAD_SHA1> [COMPONENTS=<Unity|Windows|Windows-Mono|Mac|Mac-Mono|WebGL>] .
 ```
 
 # How to activate
