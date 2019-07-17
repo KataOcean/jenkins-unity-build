@@ -4,9 +4,13 @@ services:
     container_name: master
     image: kataocean/jenkins_unity:2018.4.2f1
     ports:
-      - 8080:8080
+      - ${PORT}:8080
     volumes:
       - ./jenkins_home:/var/jenkins_home
     environment:
       - UNITY_USERNAME=${UNITY_USERNAME}
       - UNITY_PASSWORD=${UNITY_PASSWORD}
+      - GOOGLE_DRIVE_API_KEY=${GOOGLE_DRIVE_API_KEY}
+      - GOOGLE_REFRESH_TOKEN=${GOOGLE_REFRESH_TOKEN}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_CLIENT_SECRET=${GOOGLE_CLIENT_SECRET}

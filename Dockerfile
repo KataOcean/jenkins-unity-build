@@ -61,6 +61,7 @@ RUN apt-get update -qq; \
     build-essential \
     xvfb \
     wget \
+    jq \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
