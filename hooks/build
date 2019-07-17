@@ -1,4 +1,6 @@
 #!/bin/bash
 set -eu
 
-docker build -t $IMAGE_NAME --build-arg DOWNLOAD_URL=${DOWNLOAD_URL} SHA1=${SHA1} .
+env
+
+docker build -t $IMAGE_NAME --build-arg DOWNLOAD_URL=$DOWNLOAD_URL SHA1=$SHA1 .
