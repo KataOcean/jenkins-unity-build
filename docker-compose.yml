@@ -2,7 +2,7 @@ version: "3"
 services:
   master:
     container_name: master
-    image: kataocean/jenkins_unity:latest
+    image: kataocean/jenkins_unity:2018.4.2f1
     ports:
       - 8080:8080
     volumes:
