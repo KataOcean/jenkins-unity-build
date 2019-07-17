@@ -1,6 +1,8 @@
 # jenkins-unity-build
 jenkinsでunityをビルドしたい
 
+kataocean/jenkins_unity:latest (Unity2018.4.2f1)
+
 # 参考
 
 [https://github.com/wtanaka/docker-unity3d](wtanaka/docker-unity3d)
@@ -9,14 +11,24 @@ jenkinsでunityをビルドしたい
 # 準備
 
 ``` .env
-JENKINS_SLAVE_SSH_PUBKEY=YOUR_JENKINS_SLAVE_SSH_PUBKEY
 UNITY_USERNAME=jenkins@hoge.com
 UNITY_PASSWORD=jenkins
-DOWNLOAD_URL=YOUR_UNITY_DOWNLOAD_URL
-SHA1=YOUR_UNITY_SHA1
 ```
 
 ダウンロードURLやSHA1はこちらから: <https://forum.unity.com/threads/unity-on-linux-release-notes-and-known-issues.350256/>
+
+ex.
+```
+Unity2018.4.2f1
+DOWNLOAD_URL=https://beta.unity3d.com/download/d6fb3630ea75/UnitySetup-2018.4.2f1
+SHA1=967f3f280ca422a222b58a50850f96e99604aef9
+```
+
+# How to build
+
+```
+docker build . [-t <NAME>] -f ./unity.Dockerfile --build-arg DOWNLOAD_URL=<YOUR_UNITY_DOWNLOAD_URL> SHA1=<YOUR_UNITY_DOWNLOAD_SHA1> [COMPONENTS=<Unity|Windows|Windows-Mono|Mac|Mac-Mono|WebGL>]
+```
 
 # How to activate
 

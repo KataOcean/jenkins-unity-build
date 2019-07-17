@@ -2,12 +2,7 @@ version: "3"
 services:
   master:
     container_name: master
-    build:
-      context: .
-      dockerfile: unity.Dockerfile
-      args:
-        DOWNLOAD_URL: ${DOWNLOAD_URL}
-        SHA1: ${SHA1}
+    image: kataocean/jenkins_unity:latest
     ports:
       - 8080:8080
     volumes:
@@ -15,9 +10,3 @@ services:
     environment:
       - UNITY_USERNAME=${UNITY_USERNAME}
       - UNITY_PASSWORD=${UNITY_PASSWORD}
-
-  slave01:
-    container_name: slave01
-    image: jenkins/ssh-slave
-    environment:
-      - JENKINS_SLAVE_SSH_PUBKEY=${JENKINS_SLAVE_SSH_PUBKEY}

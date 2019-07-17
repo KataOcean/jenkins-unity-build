@@ -9,6 +9,7 @@ ARG COMPONENTS=Unity,Windows,Windows-Mono,Mac,Mac-Mono,WebGL
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
 
+RUN curl -sL https://deb.nodesource.com/setup_10.x | bash -
 RUN apt-get update -qq; \
     apt-get install -qq -y \
     gconf-service \
@@ -56,6 +57,8 @@ RUN apt-get update -qq; \
     xdg-utils \
     lsb-release \
     libpq5 \
+    nodejs \
+    build-essential \
     xvfb \
     wget \
     && apt-get clean \
