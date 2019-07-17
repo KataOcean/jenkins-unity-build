@@ -1,6 +1,11 @@
 # jenkins-unity-build
 jenkinsでunityをビルドしたい
 
+# 参考
+
+[https://github.com/wtanaka/docker-unity3d](wtanaka/docker-unity3d)
+[https://gitlab.com/gableroux/unity3d](https://gitlab.com/gableroux/unity3d)
+
 # 準備
 
 ``` .env
