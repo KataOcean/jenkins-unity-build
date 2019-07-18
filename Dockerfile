@@ -62,6 +62,8 @@ RUN apt-get update -qq; \
     xvfb \
     wget \
     jq \
+    zip \
+    unzip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
